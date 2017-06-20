@@ -40,13 +40,16 @@ coreos:
         [Install]
         WantedBy=sockets.target
 
+  packages:
+   - jenkins
+      
 ssh_authorized_keys:
   - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDlZLcFVYcMbYkJ+pwSsTnfOfwmOLZe26J6PBHa/17ZuzBI563BWJfTybjgphVOJwQKAqN+cBfzHZ66PaQm0vqx2Efee1uGq/vd8cmAIyEqmZUnbkxPRQ3G7YLlAwqZalRo2TEglWhEK+O+7hycV3NhCKYpG/2DZwGbW97bKh01R3R0pt9PiSi570w4W4oeUxPioqR/dIJf+g4EnOCnPMvLAT6exGI9hcKCRH3604Qnh2z5rQ0aG4PYS8uCi5MS8AevuWxNg7OKE6e59XxDvruULq+4jerAls+HZVomZ2AQvbcabpqKFEKvVtE12k5uzAWelmZU49NCIHuUgrX5hm0X peter@hackintosh.local"
   - "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDEi3qlhsXsjESgzuLF1WBirWUPRO8SNioZZu/ZIlQjyZlhO7F0zitWYKIDWEZ01k+6Ld6juDDNVE5x4NWHKovujtU3rvYC10l5WOb8d53pW6ymnAh1PYJVDAa0cPO4krg84SAP1x3Jpccn7Ue4veCwFOEvwvMz81F4sxE/VtmVPNTcjt2Nsv1VNvwF2bFjoPWlNq1ZFpvEczbLfn+Ef7A6cOcBNUykry6dO2kVEcaxOeIjRhiLq1T11vJUuuYly82bCWCo3wZtpNEH11LehAVEjL1JOBraqJTtlzVt4/jROv0ciAJW1aPaJS2PRgRyOCLl5PkXkhjsLtMwjAeF/4Er core@localhost"
  
 hostname: coreos
 #( test -d /home/jenkins/java || (mkdir /home/jenkins/java && curl -s -L https://javadl.oracle.com/webapps/download/AutoDL?BundleId=83376 | tar -C /home/jenkins/java --strip=1 -zx) && ssh-keyscan -H github.com > /home/jenkins/.ssh/known_hosts ) ;
-
+packages
 users:
   - name: "core"
     ssh_authorized_keys:
